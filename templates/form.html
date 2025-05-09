@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Amor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Deixe sua mensagem de amor 💌</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label for="nome">Nome(s):</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <label>Imagens (até 5):</label>
+        <div id="image-fields">
+            <div class="image-upload">
+                <input type="file" name="imagens" accept="image/*">
+            </div>
+        </div>
+        <button type="button" id="add-image" class="add-btn">+</button>
+
+        <label for="data">Data do momento especial:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="hora">Hora do momento especial:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

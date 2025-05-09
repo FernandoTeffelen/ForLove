@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ titulo }}</h1>
+
+    {% if respostas %}
+        {% for resposta in respostas %}
+        <div class="resposta">
+            <p><strong>Nome:</strong> {{ resposta.nome }}</p>
+            <p><strong>Mensagem:</strong> {{ resposta.mensagem }}</p>
+
+            {% if resposta.imagem %}
+                <div class="imagens">
+                    {% for img in resposta.imagem %}
+                        <img src="{{ url_for('static', filename='uploads/' ~ img) }}" alt="Imagem enviada">
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <p><strong>Tempo desde o momento especial:</strong></p>
+            <div id="contador_{{ loop.index }}" class="contador"></div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const dataEvento = "{{ resposta.data }}T{{ resposta.hora }}";
+                    calcularTempo(dataEvento, "contador_{{ loop.index }}");
+                });
+            </script>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>Nenhuma resposta encontrada.</p>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

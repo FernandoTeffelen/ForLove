@@ -1,0 +1,119 @@
+body {
+    background-color: #1a1a2e;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6ec7;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #2e2e3e;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 110, 199, 0.2);
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+    color: #ff6ec7;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3c1e70;
+    color: white;
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #ff4c61;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff6ec7;
+}
+
+.resposta {
+    background-color: #2e2e3e;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(92, 42, 157, 0.3);
+    max-width: 700px;
+}
+
+.resposta img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 8px rgba(255, 110, 199, 0.2);
+}
+
+.contador {
+    color: #ff6ec7;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Fonte bonita */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo do botão "+" */
+.add-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 16px;
+    font-size: 18px;
+    background-color: #5c2a9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #ff6ec7;
+}
+
+/* Estilo dos campos de upload */
+.image-upload input[type="file"] {
+    background-color: #3c1e70;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+}
