@@ -25,7 +25,11 @@ def salvar_respostas(respostas):
     with open('respostas.json', 'w') as f:
         json.dump(respostas, f, indent=4)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
+
+@app.route('/criar', methods=['GET', 'POST'])
 def formulario():
     if request.method == 'POST':
         nome = request.form['nome']
@@ -56,7 +60,7 @@ def formulario():
         salvar_respostas(respostas)
 
         return redirect(url_for('respostas_por_nome', nome_slug="-".join(nome.split())))
-
+    
     return render_template('form.html')
 
 @app.route('/<nome_slug>', methods=['GET'])

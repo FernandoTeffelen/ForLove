@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao nosso site!</h1>
+        <p>Se você está pronto para criar seu site, clique abaixo!</p>
+        <a href="{{ url_for('formulario') }}" class="btn">Quero fazer meu site</a>
+    </div>
+</body>
+</html>
